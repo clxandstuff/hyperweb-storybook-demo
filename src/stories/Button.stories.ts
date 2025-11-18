@@ -15,6 +15,14 @@ const meta = {
       exclude: ['onClick', 'primary'],
     }
   },
+  argTypes: {
+    slot: {
+      control: 'text',
+      table: {
+        category: 'Slots',
+      }
+    }
+  },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
@@ -28,7 +36,7 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
     backgroundColor: "hsla(236, 100%, 66%, 1)",
-    size: "small"
+    size: "small",
   },
   tags: ['autodocs'],
 };

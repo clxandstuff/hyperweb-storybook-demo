@@ -15,6 +15,7 @@ export interface ButtonProps {
   sizes?: {
     fullWidth?: boolean;
   };
+  slot: string;
 }
 
 /** Primary UI component for user interaction */
@@ -23,6 +24,7 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  slot,
   sizes: {
     fullWidth = false,
   } = {},
@@ -38,6 +40,7 @@ export const Button = ({
       {...props}
     >
       {label}
+      {slot}
     </button>
   );
 };
